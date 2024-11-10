@@ -3,6 +3,7 @@ import "leaflet/dist/leaflet.css";
 import React, { useEffect, useRef } from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
+// This component is responsible for creating the map for the bonus mission, it got more complicated because of the use of leaflet, I tried to explain what I did in some places.
 const MapComponent = ({ lat, lng }) => {
   const mapRef = useRef(null);
 
@@ -16,11 +17,12 @@ const MapComponent = ({ lat, lng }) => {
     }
   }, [lat, lng]); // Re-run effect when lat or lng changes
 
+  // set the marker icon to the default marker image
   const customIcon = new L.Icon({
-    iconUrl: require("leaflet/dist/images/marker-icon.png"), // Use the default Leaflet marker image
-    iconSize: [25, 41], // Size of the marker
-    iconAnchor: [12, 41], // Point of the marker that will correspond to the position
-    popupAnchor: [1, -34], // Position of the popup relative to the marker
+    iconUrl: require("leaflet/dist/images/marker-icon.png"),
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
   });
 
   if (!lat || !lng) {

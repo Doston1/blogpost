@@ -2,7 +2,6 @@ import "leaflet/dist/leaflet.css";
 import React, { Component } from "react";
 import "tachyons";
 import FilterBar from "../components/FilterBar";
-// import MapComponent from "../components/MapComponent";
 import Pagination from "../components/Pagination";
 import PostList from "../components/PostList";
 import "./App.css";
@@ -124,11 +123,7 @@ class App extends Component {
         <div className="content-container">
           <div className="posts-container">
             {/* PostList component is responsible for showing the posts */}
-            {/* <PostList posts={currentPosts} /> */}
-            <PostList
-              posts={currentPosts}
-              // renderMap={(lat, lng) => <MapComponent lat={lat} lng={lng} />}
-            />
+            <PostList posts={currentPosts} />
           </div>
           {/* Pagination component is responsible for the pagination system */}
           <Pagination

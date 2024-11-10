@@ -1,6 +1,7 @@
 import React from "react";
 import Post from "./Post";
 
+// This component is responsible for the list of the posts, creating a Post card for each one of the posts that fit the filters.
 const PostList = ({ posts }) => {
   if (posts.length === 0) {
     return (
