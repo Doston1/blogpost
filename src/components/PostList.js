@@ -14,13 +14,7 @@ const PostList = ({ posts }) => {
       <div className="posts-container">
         {posts.map((post) => (
           <div key={post.id} className="post-item">
-            <Post
-              title={post.title}
-              body={post.body}
-              author={post.userId}
-              lat={post.lat} // Pass lat and lng to Post component
-              lng={post.lng}
-            />
+            <Post title={post.title} body={post.body} author={post.userId} />
           </div>
         ))}
       </div>

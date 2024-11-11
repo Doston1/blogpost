@@ -34,7 +34,7 @@ const MapComponent = ({ lat, lng }) => {
       {/* Use the lat, lng as key to force a re-initialization of the map */}
       <MapContainer
         center={[lat, lng]}
-        zoom={10}
+        zoom={5}
         scrollWheelZoom={true}
         key={`${lat}-${lng}`} // Key forces re-initialization on location change
         whenCreated={(mapInstance) => {

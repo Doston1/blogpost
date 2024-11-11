@@ -2,7 +2,9 @@ import React from "react";
 import MapComponent from "./MapComponent";
 
 // This component is responsible for the post card for each post, putting the title, author, body and the bonus map using MapComponent
-const Post = ({ title, body, author, lat, lng }) => {
+const Post = ({ title, body, author }) => {
+  let lat = parseFloat((Math.random() * 180 - 90).toFixed(5));
+  let lng = parseFloat((Math.random() * 360 - 180).toFixed(5));
   return (
     <div className="bg-washed-blue dib br3 pa3 ma2 bw2 grow shadow-5 ba tc w-90">
       <div className="post-header mb3">
