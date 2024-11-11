@@ -2,9 +2,9 @@
 
 This is a react based project that allows to view a list of posts fetched from JSONPlaceholder API.
 
-Main JS file is index.js that runs the App component which is located in containers/App.js.
+Main JS file is index.js, that is located in src folder and runs the App component which is located in src/containers/App.js.
 
-App.js uses other more basic components located in the components folder.
+App.js uses other more basic components located in the src/components folder.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
